@@ -55,7 +55,7 @@ const createLoremIpsumContextBox = (editorElement: HTMLElement) => {
 				<input type="range" id="range-slider-${randomNumber}" min="1" max="100" value="5">
 			</div>
 
-			<button class="lorem-ipsum-generate-button">Generate</button>
+			<button type="button" class="lorem-ipsum-generate-button">Generate</button>
 		</div>
 	`;
 	editorElement.appendChild(contextBox);
