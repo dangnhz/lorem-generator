@@ -79,7 +79,7 @@ export function generateHTMLDocument() {
 
 			// Generate unordered list
 			documentContent.push('<ul>');
-			for (let i = 0; i < getRandomNumberBetween(3, 10); i++) {
+			for (let i = 0; i < getRandomNumberBetween(2, 5); i++) {
 				documentContent.push(`<li>${generateSentence(getRandomNumberBetween(4, 20))}</li>`);
 			}
 			documentContent.push('</ul>');
@@ -88,12 +88,12 @@ export function generateHTMLDocument() {
 
 			// Generate ordered list
 			documentContent.push('<ol>');
-			for (let i = 0; i < getRandomNumberBetween(3, 10); i++) {
-				documentContent.push(`<li>${generateSentence(getRandomNumberBetween(4, 20))}</li>`);
+			for (let i = 0; i < getRandomNumberBetween(2, 5); i++) {
+				documentContent.push(`<li>${generateSentence(getRandomNumberBetween(4, 15))}</li>`);
 			}
 			documentContent.push('</ol>');
 
-			documentContent.push(generateParagraphs(getRandomNumberBetween(3, 8)));
+			documentContent.push(generateParagraphs(getRandomNumberBetween(1, 3)));
 		}
 	}
 
