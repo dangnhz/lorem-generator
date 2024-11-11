@@ -39,7 +39,7 @@ function randomizePunctuation(sentence: string) {
 export function generateParagraphs(paragraphCount: number) {
 	let paragraphs = [];
 	for (let i = 0; i < paragraphCount; i++) {
-		let sentenceCount = getRandomNumberBetween(3, 10);
+		let sentenceCount = getRandomNumberBetween(3, 7);
 		let numberOfWordPerSentence = getRandomNumberBetween(6, 15);
 		let sentences = [];
 		for (let j = 0; j < sentenceCount; j++) {
@@ -67,11 +67,11 @@ export function generateHTMLDocument() {
 	// Generate headings
 	for (let i = 1; i <= 6; i++) {
 		documentContent.push(`<h${i}>Heading ${i}</h${i}>`);
-		documentContent.push(generateParagraphs(getRandomNumberBetween(5, 15)));
+		documentContent.push(generateParagraphs(getRandomNumberBetween(1, 3)));
 
 		if (random == i) {
 			// Generate links (internal and external)
-			let linkText = generateSentence(getRandomNumberBetween(1, 5)).toLowerCase().replace('.', '');
+			let linkText = generateSentence(getRandomNumberBetween(1, 3)).toLowerCase().replace('.', '');
 			documentContent.push(`<p>Lorem ipsum <a href="https://www.example.com">${linkText}</a> dolor sit amet.</p>`);
 
 			linkText = generateSentence(getRandomNumberBetween(1, 8)).toLowerCase().replace('.', '');
@@ -84,7 +84,7 @@ export function generateHTMLDocument() {
 			}
 			documentContent.push('</ul>');
 
-			documentContent.push(generateParagraphs(getRandomNumberBetween(3, 7)));
+			documentContent.push(generateParagraphs(1));
 
 			// Generate ordered list
 			documentContent.push('<ol>');
